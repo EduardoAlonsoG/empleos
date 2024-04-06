@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeLeaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+    <!--<h1 th:text="${mensaje}"></h1>
+    <h2>Hoy es [[${SystemDate}]]</h2>-->
+    <h1>Weolcome</h1>
+    <h2>Job Offer</h2>
+    <h3 th:text="'Title: ' + ${nombre} "></h3>
+    <h3 th:text="'Publication Date: ' + ${fecha} "></h3>
+    <h3 th:text="'Salary: ' + ${salario} "></h3>
+    <h3 th:text="'Available: ' + (${vigente}) ? yes :  no "></h3>
+</body>
+</html>
