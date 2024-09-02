@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping(value = "/categorias")
@@ -19,7 +20,9 @@ public class CategoriasController {
     }
 
     @RequestMapping(value="/save" ,  method = RequestMethod.POST)
-    public String guardar(Model model){
+    public String guardar(@RequestParam("nombre") String nombre , @RequestParam("descripcion") String descricion){
+        System.out.println("Categoria : " + nombre);
+        System.out.println("Descripcion : " + descricion);
         return "categorias/listCategorias";
     }
 }

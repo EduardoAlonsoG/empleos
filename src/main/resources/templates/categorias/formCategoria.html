@@ -2,9 +2,19 @@
 <html xmlns:th="http//www.thymeLeaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Form Categorias</title>
+    <title>Crea Categorias</title>
 </head>
 <body>
+    <h1>Creacion de Categorias</h1>
+    <form th:action="@{/categorias/save}" method="post">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" type="text" name="nombre" value=""/>
+        <br>
+        <label for="descripcion">Descripcion:</label>
+        <input id="descripcion" type="text" name="descripcion" value=""/>
+        <br>
+        <input type="submit" value="Guardar" />
+    </form>
 
 </body>
 </html>
