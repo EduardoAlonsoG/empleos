@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping(value = "/categorias")
 public class CategoriasController {
     @RequestMapping(value="/index" ,  method = RequestMethod.GET)
     public String mostrarIndex(Model model){
@@ -17,7 +18,7 @@ public class CategoriasController {
         return "categorias/formCategoria";
     }
 
-    @RequestMapping(value="/save" ,  method = RequestMethod.GET)
+    @RequestMapping(value="/save" ,  method = RequestMethod.POST)
     public String guardar(Model model){
         return "categorias/listCategorias";
     }
