@@ -26,23 +26,9 @@ public class HomeController {
 
     @GetMapping("/")
     public String mostrarHome(Model model) {
-        /*model.addAttribute("mensaje", "Welcome to jobsApp");
-        model.addAttribute("SystemDate" , new Date());*/
-
-        String name = "auxiliar de contabilidad";
-        Date pubDate = new Date();
-        double salary = 3440.0;
-        boolean vigency = true;
-
-        model.addAttribute("nombre", name);
-        model.addAttribute("fecha", pubDate);
-        model.addAttribute("salario", salary);
-        model.addAttribute("vigente", vigency);
-
+        List<Vacante> lista = serviceVacantes.buscarTodas();
+        model.addAttribute("vacantes",lista);
         return "home";
-        //regresa la vista html cuando se ingresa a la url /
-        // las vistas se crean en /src/main/resources/templates
-
     }
 
     @GetMapping("/listado")
