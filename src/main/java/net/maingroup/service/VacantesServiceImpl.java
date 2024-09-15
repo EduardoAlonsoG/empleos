@@ -24,6 +24,8 @@ public class VacantesServiceImpl implements IVacantesService{
             temp.setSalario(6666);
             temp.setDescripcion("ayuda necesito un contador");
             temp.setDestacado(1);
+
+            temp.setImagen("empresa1.png");
             lista.add(temp);
 
             Vacante temp1 = new Vacante();
